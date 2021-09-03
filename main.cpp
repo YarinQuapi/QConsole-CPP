@@ -2,16 +2,17 @@
 #include <string>
 #include <iostream>
 #include "CommandHandler.h"
+#include "main.h"
+
 
 using namespace std;
-
-bool running = true;
-
 
 typedef std::string str;
 
 int main() {
-    while (running) {
+    main::setRunning(true);
+
+    while (main::getRunning()) {
         str title = "QConsole";
         SetConsoleTitle(title.c_str());
 
